@@ -89,6 +89,13 @@ loguru
 python-dotenv
 
 # ======================================================
+# GUI BACKEND FOR MATPLOTLIB ANIMATIONS (macOS/Linux only)
+# ======================================================
+
+# Qt-based GUI framework for interactive plotting and animations (~50-60 MB)
+PyQt6; sys_platform != "win32"
+
+# ======================================================
 # KAFKA MESSAGE BROKER INTEGRATION
 # ======================================================
 

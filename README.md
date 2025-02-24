@@ -1,9 +1,6 @@
-# buzzline-05-case
+# buzzline-05-montoya
 
-Nearly every streaming analytics system stores processed data somewhere for further analysis, historical reference, or integration with BI tools.
-
-In this example project, we incorporate a relational data store. 
-We use SQLite, but the example could be altered to work with MySQL, PostgreSQL, or MongoDB.
+This project ingests live data from a local file and processes it using a custom Kafka consumer. The consumer reads real-time messages, processes them, and stores insights in a SQLite database. Additionally, sentiment analysis is performed on each message to track trends over time.
 
 ## VS Code Extensions
 
@@ -72,13 +69,13 @@ Windows:
 
 ```shell
 .venv\Scripts\activate
-py -m producers.producer_case
+py -m producers.producer_montoya
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.producer_case
+python3 -m producers.producer_montoya
 ```
 
 The producer will still work if Kafka is not available.
@@ -96,17 +93,17 @@ Use the commands below to activate .venv, and start the consumer.
 Windows:
 ```shell
 .venv\Scripts\activate
-py -m consumers.kafka_consumer_case
+py -m consumers.kafka_consumer_montoya
 OR
-py -m consumers.file_consumer_case
+py -m consumers.file_consumer_montoya
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.kafka_consumer_case
+python3 -m consumers.kafka_consumer_montoya
 OR
-python3 -m consumers.file_consumer_case
+python3 -m consumers.file_consumer_montoya
 ```
 
 ---
